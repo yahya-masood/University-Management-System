@@ -11,3 +11,11 @@ function testCGPACalculation() {
     console.log("Green Phase: CGPA is " + cgpa);
 }
 testCGPACalculation();
+// TDD Refactor Phase: Reusable CGPA Calculator function
+const calculateCGPA = (points, credits) => (points / credits).toFixed(2);
+
+function testCGPACalculation() {
+    let currentCGPA = calculateCGPA(30, 10);
+    console.log("Refactor Phase: Accurately calculated CGPA: " + currentCGPA);
+}
+testCGPACalculation();
